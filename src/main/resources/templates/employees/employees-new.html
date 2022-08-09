@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="layouts :: th-head"> </head>
+<Title> Welcome to the team! 🐱‍💻</Title>
+<body>
+  <nav th:replace="layouts :: nav"></nav>
+  <div class="container">
+    <form action="/employees/save" th:object="${employee}" method="POST">
+      <input type="text" placeholder="First name" th:field="${employee.firstName}">
+      <input type="text" placeholder="Last name" th:field="${employee.lastName}">
+      <input type="text"  placeholder="Your email" th:field="${employee.email}">
+      <button type="Submit">Join our team!</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head th:replace="layouts :: th-head"></head>
+  <title>Our Employees 👽</title>
+  <body>
+    <nav th:replace="layouts :: nav"></nav>
+    <div>
+      <h1>Current Projects</h1>
+      <table>
+        <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>Project Stage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each=" aProject : ${projectList}">
+          <td th:text="${aProject.name}"/>
+          <td th:text="${aProject.stage}"/>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  <a th:href="@{projects/new}">Add a new project!</a>
+  </body>
+</html>
