@@ -35,10 +35,10 @@ public class EmployeeController {
     }
 
     @PostMapping("/save")
-    public String addEmployee(Employee employee, Model model)
+    public String addEmployee(Employee employee)
     {
         empRep.save(employee);
 
-        return "redirect:/employees/new";
+        return "redirect:/employees";
     }
 }
